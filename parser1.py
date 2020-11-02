@@ -8,19 +8,12 @@ outfile = open('out.txt', 'r')
 URL = 'https://finance.liga.net/currency'
 prices = []
 
-'''Connect to web site'''
-
-
-def get_html(url):
-    data = requests.get(url)
-    return data
-
 
 '''Get the all html data from site'''
 
 
 def get_data(url):
-    data = get_html(url)
+    data = requests.get(url)
     return data.text
 
 
@@ -57,4 +50,4 @@ def run():
     run()
 
 
-print(get_data(URL))
+run()
