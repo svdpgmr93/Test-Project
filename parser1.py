@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import time
 
 
 outfile = open('out.txt', 'r')
@@ -46,8 +45,6 @@ def run():
         prices.append(text(str(elem)))
     with open('out.txt', 'w') as fw:
         json.dump(prices, fw)
-    time.sleep(86400)
-    run()
 
 
 run()
