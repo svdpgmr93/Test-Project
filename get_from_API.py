@@ -8,7 +8,6 @@ URL_LST = [
 
 def get_data(url):
     data = requests.get(url).json()
-
     return data
 
 
